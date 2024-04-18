@@ -1,14 +1,10 @@
-public class Animale {
+public abstract class Animale {
     private int zampe;
     private String nome;
 
     public Animale(int zampe, String nome) {
         this.zampe = zampe;
         this.nome = nome;
-    }
-
-    public Animale(){
-
     }
 
     public Animale(String nome){
@@ -35,4 +31,10 @@ public class Animale {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public String visualizzaDati(){
+        return "Nome: " + nome + ", zampe: " + zampe;
+    }
+
+    public abstract void verso();
 }
